@@ -50,11 +50,15 @@ while(True):
     elif(opcion==4):
         print (productos)
         productoEliminar=input("Ingrese producto a eliminar: ")
+        bandera=True
         for i in range(0,len(productos)):
             if(productoEliminar==productos[i]):
                 productos.pop(i)
+                bandera=True
             else:
-                print("producto sin registro")    
+                bandera=False
+        if(bandera==False):
+            print("producto sin registro")    
         print(productos)
 
     elif(opcion==0):
